@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Head from "../components/Head";
 const Head = () => {
   return (
-    <div>Head</div>
-  )
-}
+    <div>
+      <Head />
+    </div>
+  );
+};
 
-export default Head
+export default Head;
