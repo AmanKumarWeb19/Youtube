@@ -14,7 +14,8 @@ const btnList = [
   "Biryani",
   "Ipl",
   "Coding",
-  "DSA"
+  "DSA",
+  "Chess",
 ];
 
 const ButtonList = () => {
