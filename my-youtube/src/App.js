@@ -1,9 +1,13 @@
 import "./App.css";
+import Body from "./components/Body";
+import Head from "./components/Head";
 function App() {
   return (
     <div>
-      <h1 className="bg-red-500 font-bold text-3xl">Namaste React</h1>
+    <Head/>
+    <Body/>
     </div>
+
   );
 }
 
