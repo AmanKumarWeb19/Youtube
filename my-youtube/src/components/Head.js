@@ -17,6 +17,7 @@ const Head = () => {
           src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"
           alt="hamburger"
         />
+
         <img
           className="h-8 mx-2"
           src="https://vectorseek.com/wp-content/uploads/2021/01/YouTube-Logo-Vector.png"
