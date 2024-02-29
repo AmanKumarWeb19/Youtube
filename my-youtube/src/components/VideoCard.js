@@ -20,7 +20,7 @@ const VideoCard = ({ info }) => {
     return null; // Render nothing if thumbnails is undefined
   }
   return (
-    <div className="p-2 w-60 shadow-lg m-auto">
+    <div className="p-2 m-2 w-60 shadow-lg">
       <img
         className="rounded-lg"
         src={thumbnails.high.url}
