@@ -54,24 +54,24 @@ const Head = () => {
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-        <div className="fixed bg-white py-2 px-5 w-1/3 rounded-lg shadow-lg">
+        <div className="fixed bg-white py-2 px-2 w-1/3 rounded-lg shadow-lg border border-gray-100">
           <ul>
-            <li className="py-2 shadow-sm">
+            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
               <i className="fa-solid fa-magnifying-glass"></i> iPhone
             </li>
-            <li className="py-2 shadow-sm">
+            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
               <i className="fa-solid fa-magnifying-glass"></i> iPhone 11
             </li>
-            <li className="py-2 shadow-sm">
+            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
               <i className="fa-solid fa-magnifying-glass"></i> iPhone 12
             </li>
-            <li className="py-2 shadow-sm">
+            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
               <i className="fa-solid fa-magnifying-glass"></i> iPhone 12 pro
             </li>
-            <li className="py-2 shadow-sm">
+            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
               <i className="fa-solid fa-magnifying-glass"></i> iPhone 13
             </li>
-            <li className="py-2 shadow-sm">
+            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
               <i className="fa-solid fa-magnifying-glass"></i> iPhone 13 pro max
             </li>
           </ul>
