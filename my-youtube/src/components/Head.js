@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/AppSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { cacheResults } from "../utils/searchSlice";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
+
+  const searchCache = useSelector((store) => store.search);
 
   const dispatch = useDispatch();
 
@@ -15,7 +18,13 @@ const Head = () => {
   };
 
   useEffect(() => {
-    const Timer = setTimeout(() => getSearchSuggestions(), 200);
+    const Timer = setTimeout(() => {
+      if (searchCache[searchQuery]) {
+        setSuggestion(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestions();
+      }
+    }, 200);
 
     return () => {
       clearTimeout(Timer);
@@ -26,6 +35,11 @@ const Head = () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     setSuggestion(json[1]);
+    dispatch(
+      cacheResults({
+        [searchQuery]: json[1],
+      })
+    );
   };
 
   return (
@@ -62,7 +76,7 @@ const Head = () => {
         {showSuggestion && (
           <div className="fixed bg-white py-2 px-2 w-1/3 rounded-lg shadow-lg border border-gray-100">
             <ul>
-              {suggestion.map((s) => (
+              {suggestion && suggestion.map((s) => (
                 <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
                   <i className="fa-solid fa-magnifying-glass"></i> {s}
                 </li>
