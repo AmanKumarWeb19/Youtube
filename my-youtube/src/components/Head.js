@@ -5,6 +5,8 @@ import { YOUTUBE_SEARCH_API } from "../utils/constants";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [suggestion, setSuggestion] = useState([]);
+  const [showSuggestion, setShowSuggestion] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -23,6 +25,7 @@ const Head = () => {
   const getSearchSuggestions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
+    setSuggestion(json[1]);
   };
 
   return (
@@ -49,33 +52,24 @@ const Head = () => {
             placeholder="Search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => setShowSuggestion(true)}
+            onBlur={() => setShowSuggestion(false)}
           />
           <button className="border border-gray-400 px-5 py-2 rounded-r-full bg-gray-200">
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-        <div className="fixed bg-white py-2 px-2 w-1/3 rounded-lg shadow-lg border border-gray-100">
-          <ul>
-            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
-              <i className="fa-solid fa-magnifying-glass"></i> iPhone
-            </li>
-            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
-              <i className="fa-solid fa-magnifying-glass"></i> iPhone 11
-            </li>
-            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
-              <i className="fa-solid fa-magnifying-glass"></i> iPhone 12
-            </li>
-            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
-              <i className="fa-solid fa-magnifying-glass"></i> iPhone 12 pro
-            </li>
-            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
-              <i className="fa-solid fa-magnifying-glass"></i> iPhone 13
-            </li>
-            <li className="py-2 px-3 shadow-sm hover:bg-gray-100">
-              <i className="fa-solid fa-magnifying-glass"></i> iPhone 13 pro max
-            </li>
-          </ul>
-        </div>
+        {showSuggestion && (
+          <div className="fixed bg-white py-2 px-2 w-1/3 rounded-lg shadow-lg border border-gray-100">
+            <ul>
+              {suggestion.map((s) => (
+                <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
+                  <i className="fa-solid fa-magnifying-glass"></i> {s}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className="col-span-1">
         <img
