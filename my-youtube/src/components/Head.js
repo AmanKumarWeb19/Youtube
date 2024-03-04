@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/AppSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -52,11 +53,13 @@ const Head = () => {
           alt="hamburger"
         />
 
-        <img
-          className="h-8 mx-2"
-          src="https://vectorseek.com/wp-content/uploads/2021/01/YouTube-Logo-Vector.png"
-          alt="youtube logo"
-        />
+        <a href="/">
+          <img
+            className="h-8 mx-2"
+            src="https://vectorseek.com/wp-content/uploads/2021/01/YouTube-Logo-Vector.png"
+            alt="youtube logo"
+          />
+        </a>
       </div>
       <div className="col-span-10 px-10">
         <div>
@@ -74,13 +77,14 @@ const Head = () => {
           </button>
         </div>
         {showSuggestion && (
-          <div className="fixed bg-white py-2 px-2 w-1/3 rounded-lg shadow-lg border border-gray-100">
+          <div className="fixed bg-white py-2 px-2 w-1/3 rounded-lg shadow-lg border border-gray-100 max-h-80 overflow-y-auto ">
             <ul>
-              {suggestion && suggestion.map((s) => (
-                <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
-                  <i className="fa-solid fa-magnifying-glass"></i> {s}
-                </li>
-              ))}
+              {suggestion &&
+                suggestion.map((s) => (
+                  <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
+                    <i className="fa-solid fa-magnifying-glass"></i> {s}
+                  </li>
+                ))}
             </ul>
           </div>
         )}
