@@ -18,7 +18,7 @@ const LiveChat = () => {
           message: generateRandomMessage(25) + " " + "🚀",
         })
       );
-    }, 1500);
+    }, 2000);
 
     return () => clearInterval(i);
   }, []);
@@ -44,7 +44,7 @@ const LiveChat = () => {
         </div>
       </div>
       <form
-        className="w-full p-2 ml-2 border border-black"
+        className="w-full p-2 ml-2 border border-black rounded-lg"
         onSubmit={handleLiveMessgae}
       >
         <input
