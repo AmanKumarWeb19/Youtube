@@ -13,33 +13,33 @@ Welcome to my YouTube project! This project is a clone of YouTube, featuring var
 . Search Function: Implemented using debounce for improved performance.
 
 ## Technologies Used
-React: A JavaScript library for building user interfaces.
-Redux Toolkit: A state management library for React applications.
-React Router DOM: Declarative routing for React.
-Tailwind CSS: A utility-first CSS framework.
-YouTube API: Used for fetching video data and integrating YouTube functionality.
+- React: A JavaScript library for building user interfaces.
+- Redux Toolkit: A state management library for React applications.
+- React Router DOM: Declarative routing for React.
+- Tailwind CSS: A utility-first CSS framework.
+- YouTube API: Used for fetching video data and integrating YouTube functionality.
 
 ## Dependencies
-@reduxjs/toolkit: Redux toolkit for state management.
-@testing-library/jest-dom: Jest extension for DOM testing.
-@testing-library/react: Testing utilities for React components.
-@testing-library/user-event: Utilities for simulating user interactions.
-react: React library.
-react-dom: React DOM library.
-react-redux: Official React bindings for Redux.
-react-router-dom: React Router DOM library.
-react-scripts: Scripts and configuration for Create React App.
-web-vitals: Library for measuring web performance.
+- @reduxjs/toolkit: Redux toolkit for state management.
+- @testing-library/jest-dom: Jest extension for DOM testing.
+- @testing-library/react: Testing utilities for React components.
+- @testing-library/user-event: Utilities for simulating user interactions.
+- react: React library.
+- react-dom: React DOM library.
+- react-redux: Official React bindings for Redux.
+- react-router-dom: React Router DOM library.
+- react-scripts: Scripts and configuration for Create React App.
+- web-vitals: Library for measuring web performance.
 
 
 ## Installation
-Clone the repository: git clone https://github.com/AmanKumarWeb19/Youtube.git
+. Clone the repository: git clone https://github.com/AmanKumarWeb19/Youtube.git
 
-## BInstall dependencies:
-npm install
+## Install dependencies:
+. npm install
 
 ## Obtain a YouTube API key:
-Obtain a YouTube Data API key from the Google Cloud Console. Replace the placeholder API key in the appropriate file.
+. Obtain a YouTube Data API key from the Google Cloud Console. Replace the placeholder API key in the appropriate file.
 
 ## Usage
 To start the development server:
