@@ -4,13 +4,13 @@ Welcome to my YouTube project! This project is a clone of YouTube, featuring var
 ## You can view the deployed project here :- https://my-youtube-seven.vercel.app/
 
 ## Features
-. Header: Displays the logo and navigation links.
-. Sidebar: Provides navigation options.
-. Live Chat Message: Allows users to engage in live chat.
-. Comment Section: Enables users to leave comments on videos.
-. Video Card Section: Displays a grid of video thumbnails.
-. Watch Page: Allows users to watch selected videos.
-. Search Function: Implemented using debounce for improved performance.
+- Header: Displays the logo and navigation links.
+- Sidebar: Provides navigation options.
+- Live Chat Message: Allows users to engage in live chat.
+- Comment Section: Enables users to leave comments on videos.
+- Video Card Section: Displays a grid of video thumbnails.
+- Watch Page: Allows users to watch selected videos.
+- Search Function: Implemented using debounce for improved performance.
 
 ## Technologies Used
 - React: A JavaScript library for building user interfaces.
@@ -33,17 +33,17 @@ Welcome to my YouTube project! This project is a clone of YouTube, featuring var
 
 
 ## Installation
-. Clone the repository: git clone https://github.com/AmanKumarWeb19/Youtube.git
+- Clone the repository: git clone https://github.com/AmanKumarWeb19/Youtube.git
 
 ## Install dependencies:
-. npm install
+- npm install
 
 ## Obtain a YouTube API key:
-. Obtain a YouTube Data API key from the Google Cloud Console. Replace the placeholder API key in the appropriate file.
+- Obtain a YouTube Data API key from the Google Cloud Console. Replace the placeholder API key in the appropriate file.
 
 ## Usage
 To start the development server:
-npm start
+- npm start
 
 Open http://localhost:3000 to view it in the browser.
 
